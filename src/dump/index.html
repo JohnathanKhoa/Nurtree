@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Example</title>
+</head>
+
+<body>
+  <h1>Display your Spotify Profile Data</h1>
+  <nav>
+    <a href="http://localhost:5173/" target="">Home</a>
+  </nav>
+
+  <section id="profile">
+    <h2>Logged in as <span id="displayName"></span></h2>
+    <img id="avatar" width="200" src="#" />
+    <ul>
+      <li>User ID: <span id="id"></span></li>
+      <li>Email: <span id="email"></span></li>
+      <li>Spotify URI: <a id="uri" href="#"></a></li>
+      <li>Link: <a id="url" href="#"></a></li>
+      <li>Profile Image: <span id="imgUrl"></span></li>
+    </ul>
+  </section>
+
+  <section id="playlists">
+    <h2>Playlists</h2>
+    <img id="img" width="200" src="#" />
+    <ul>
+      <li>Playlist ID: <span id="id"></span></li>
+      <li>Name: <span id="name"></span></li>
+      <li>Description: <span id="description"></span></li>
+      <li>Tracks: <span id="tracks"></spanid></li>
+    </ul>
+  </section>
+
+  <template id="oauth-template">
+    <h2>oAuth info</h2>
+    <table>
+      <tr>
+        <td>Access token</td>
+        <td data-bind="access_token"></td>
+      </tr>
+      <tr>
+        <td>Refresh token</td>
+        <td data-bind="refresh_token"></td>
+      </tr>
+      <tr>
+        <td>Expiration at</td>
+        <td data-bind="expires">${getExpirationDate(expires_in)}</td>
+      </tr>
+    </table>
+  </template>
+
+  <button id="refresh-token-button" data-bind-onclick="refreshTokenClick();">Refresh Token</button>
+  <button id="logout-button" data-bind-onclick="logoutClick();">Log out</button>
+
+  <div id="root"></div>
+  <script src="src/Components/SpotifyAuth.jsx" type="module"></script>
+  <script type="module" src="/src/main.tsx"></script>
+</body>
+
+</html>
