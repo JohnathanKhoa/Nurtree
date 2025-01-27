@@ -1,18 +1,3 @@
-/**
- * This is an example of a basic node.js script that performs
- * the Authorization Code with PKCE oAuth2 flow to authenticate 
- * against the Spotify Accounts.
- *
- * For more information, read
- * https://developer.spotify.com/documentation/web-api/tutorials/code-pkce-flow
- */
-
-import Playlist from "./Sublist";
-
-
-
-
-
 const clientId = '1e417f950c154b3f9a6e29334fbc3fdf'; // your clientId
 const redirectUrl = 'http://localhost:5173/callback';        // your redirect URL - must be localhost URL and/or HTTPS
 
@@ -204,60 +189,4 @@ function renderTemplate(targetId, templateId, data = null) {
 
 }
 
-{/*
-function ParseResponse(playlistResponse) {
-  const playlists = new Array(playlistResponse.total);
-
-  playlistResponse.items!.forEach(ParsePlaylists);
-
-  playlistResponse.items!.forEach((item, i) => 
-      playlists[i] = { name: item.name, url: item.images[0].url },
-  
-  );
-
-  console.log(playlists[0].toString);
-  
-  {/*
-  const DisplayPlaylist = playlists.map((item, i) => 
-      <>
-          <li key={item.key}>{item.name}</li>
-          <li key= {item.key}>{item.url}</li>
-      </>
-      )
-      return (
-          
-          <>
-              {DisplayPlaylist}
-          </>
-      )
-          
-}
-
-export default function ParsePlaylists(playlists) {
-  let count = 0;
-  playlists[count] = {name: playlists.name, url: playlists.images[0].url};
-  console.log(playlists[count]);
-  count++;
-  return(
-    <div>
-      <a>{playlists[count]}</a>
-    </div>
-  )
-}
-
-
-function RenderComponent(data: SpotifyResponse) {
-  return (
-    <div>
-      {this.data.items.map(ele => (
-        <div key={ele.id}>
-            <h2>{ele.name}</h2>
-            <img src={ele.images[0].url}></img>
-        </div>
-      ))};
-    </div>
-  );
-}
-*/}
-
-export {currentToken}
+export {currentToken, getPlaylistData}

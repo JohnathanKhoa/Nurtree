@@ -6,7 +6,7 @@ const Playlist = ({ name, url, key}) => (
             <img src={url}></img>
         </span>
         
-        <p>{name}</p>
+        <span>{name}</span>
     </div>
 );
 

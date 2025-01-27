@@ -1,9 +1,8 @@
-import PropTypes from 'prop-types';
-import PlaylistResponse from '../Components/PlaylistResponse';
-import { Suspense } from 'react';
-import Login from './Login';
+import { Suspense } from "react";
+import PlaylistResponse from "../Components/PlaylistResponse";
+import Login from "./Login";
 
-export default function Home(props) {
+export default function Playlists(props) {
     return (
         <>
         <div>
